@@ -1,0 +1,47 @@
+.sidenav  {
+	float: left;
+	height: 65vw; /* Full-height: remove this if you want "auto" height */
+	width: fit-content;
+	padding: 4px;
+	z-index: 1; /* Stay on top */
+	background-color: #7da6df;
+	overflow-x: hidden; /* Disable horizontal scroll */
+	overflow-y: auto;
+}
+
+.sidenav>ul {
+	padding: 10px 0px 5px 5px ;
+	width: fit-content;
+	list-style: none;
+}
+
+.sidenav>ul li{
+	background-color: #7da6df;
+	border: 2px solid #1F5097;
+	border-radius: 8px;
+	margin: 2px 0px 2px 0px;
+	vertical-align: top;
+	text-align: left;
+	font-family: Calibri;
+	font-size: 1.2vw;
+	font-weight: bold;
+	color: black;
+	cursor: pointer;
+	display: block;
+}
+.sidenav>ul li img{
+	vertical-align: middle;
+	width:3.5vw;
+	/* height:10%; */
+}
+
+.sidenav>ul li.active {
+	background-color: #1050A7;
+	color: black;
+}
+/* Change the link color on hover */
+.sidenav>ul li:hover:not(.active) {
+	background-color: #59f;
+	color: white;
+}
+

@@ -1,0 +1,20 @@
+<div class="title_content" id="content_title">Tabel View </div>
+<div><input id="datePick" type="date" onChange="pickDate(this)"></div>
+<div>
+	<div class="tabel_monitor">
+		<div id="tabel_title">Tabel Performa </div>
+		<div>
+			<table id="tabelContainer">
+				<thead class="tabel_head"><tr id="tabel_head"></tr></thead>
+				<tbody id="tabel_data"></tbody>
+			</table>
+		</div>
+		<div id="btnExport"><input type="button" onclick="tableToExcel('tabelContainer', 'Data')" value="save"></div>
+		<ul id="btnPrevNext">
+			<li><input type="button" onclick="addPage(1)" value=">>"></li>
+			<li id="dataPage"> - </li>
+			<li><input type="button" onclick="addPage(-1)" value="<<"></li>
+		</ul>
+	</div>
+</div>
+

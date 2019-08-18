@@ -1,0 +1,91 @@
+#idx-calendar {
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+    width: 32vw;
+} 
+#idx-calendar div > ul {
+    list-style: none ;
+    background-color: #333333;
+    margin: 0;
+    padding: 0 10px;
+}
+#idx-calendar .dayName > ul {
+    background-color: #232323;
+}
+#idx-calendar ul li {
+    color: #FFFFFF;
+    float: left;
+    font-family: Tahoma;
+    font-weight: inherit;
+}
+.dayName li {
+    /* font-weight: bold; */
+    /* margin: 2% 0; */
+    /* padding: 3% 0; */
+    width: 14.2857%;
+}
+/* #dateNum ul li:hover { */
+    /* background-color: #532323; */
+/* } */
+#dateNum ul li {
+    padding: 2.5% 0;
+    width: 4vw;
+}
+#dateNum {
+    clear: both;
+    width: 100%;
+		font-size: 1.2vw;
+}
+#dateNum > ul li:first-child {
+    color: #F05558;
+    /* font-weight: bold; */
+}
+.dayName:after,#dateNum:after,#idx-calendar div > ul:after  {
+    content: "";
+    display: table;
+    clear: both;
+}
+#idx-calendar li.dayNow {
+    color: rgb(200, 200, 200);
+    font-weight: bold;
+    background-color: rgb(0, 100, 150);
+    position: relative;
+		
+}
+#idx-calendar li.outMonth {
+	font-size: 1vw;
+  font-style: italic;
+}
+#clockContainer ,#dateContainer{
+    background-color:#333333;
+}
+#clockContainer {
+	text-align: left;
+	font-size: 3vw;
+	font-family: Lucida Console;
+	font-weight: normal;
+	color: rgb(100, 110, 110);
+	padding: 5px;
+}
+#clockContainer ul li {
+    list-style: none ;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0 10px;
+		width: 4vw;
+}
+#dateContainer {
+	font-size:1.5vw;
+	text-align: left;
+	font-family: Arial;
+	font-weight: bold;
+	color: rgb(0, 150, 180);
+	padding: 5px;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #afbfda;
+}
+#calendar-control {
+    position: relative;
+}

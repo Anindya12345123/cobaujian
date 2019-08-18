@@ -1,0 +1,50 @@
+#tabel_title {
+	width: 100%;
+	text-align: left;
+	font-family: Calibri;
+	font-size: 2vw;
+}
+#datePick{
+	float: right;
+}
+
+.tabel_monitor{
+	width: 100%;
+	text-align: center;
+	font-family: Calibri;
+	font-size: 2vw;
+	/* border: 1px solid #101010; */
+}
+
+#tabelContainer{
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #101010;
+}
+
+#tabel_head th{
+	background-color: #c5c5c5; 
+	border: 1px solid #101010;
+}
+
+#tabel_data td{
+	background-color: #dadada; 
+	border: 1px solid #101010;
+	text-align: center;
+}
+
+#btnExport{
+	float: left;
+	margin: 1vw;
+}
+
+#btnPrevNext{
+	list-style: none;
+	margin: 1vw;
+	float: right;
+}
+
+#btnPrevNext > li{
+	float: right;
+}
+

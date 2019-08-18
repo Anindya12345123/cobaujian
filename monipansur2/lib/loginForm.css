@@ -1,0 +1,73 @@
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 5px 5px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button.btnLogin {
+  background-color: #004080;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+#btnCancel {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.loginImgIontainer {
+  text-align: center;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 30%;
+}
+
+.loginDataInput {
+  padding: 0 10px;
+}
+.loginDataInput > div{
+background-color:#f1f1f1;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.loginContent {
+  width: 100%;
+	height: 73vw;
+  max-height: 89%;
+  overflow: auto;
+	background-color: #afbfda; 
+}
+
+.loginFormBox {
+  background-color: #fefefe;
+  margin: 1% auto;
+	padding: 3vw;
+  border: 1px solid #888;
+  width: 50%;
+	max-width: 400px;
+	border-radius: 20px;
+}
+

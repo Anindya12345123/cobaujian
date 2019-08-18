@@ -1,0 +1,17 @@
+#chart_title {
+	width: 100%;
+	text-align: left;
+	font-family: Calibri;
+	font-size: 2vw;
+}
+#datePick{
+	float: right;
+}
+
+.grafik_monitor{
+	width: 100%;
+	text-align: center;
+	font-family: Calibri;
+	font-size: 2vw;
+}
+

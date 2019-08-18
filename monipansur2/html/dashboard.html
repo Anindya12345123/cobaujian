@@ -1,0 +1,79 @@
+<div>
+	<div class="title_content">Beranda</div>
+
+	<table class="panel_monitor">
+		<thead><tr><th colspan="3">Arus DC dan Intensitas Cahaya <br> Panel Surya</th></tr></thead>
+		<tbody>
+			<tr>
+				<td rowspan="2" id="imgGraph"><img src="img/solarpanel.png"></td>
+				<td id="i_dc_val"> - </td>
+				<td id="lux_val"> - </td>
+			</tr>
+			<tr>
+				<td>Ampere DC</td>
+				<td>Lux</td>
+			</tr>
+		</tbody>pan="2">Tegangan DC Panel Surya</th></tr></thead>
+		<tbody>
+			<tr>
+				<td rowspan="2" id="imgGraph"><img src="img/panelsurya.png"></td>
+				<td id="v_dc_val"> - </td>
+			</tr>
+			<
+	</table>
+
+	<table class="panel_monitor">
+		<thead><tr><th colstr><td>Volt DC</td></tr>
+		</tbody>
+	</table>
+	
+	<table class="panel_monitor">
+		<thead><tr><th colspan="3">Beban Lampu</th></tr></thead>
+		<tbody>
+			<tr>
+				<td rowspan="2" id="imgGraph"><img src="img/lampu.jpg"></td>
+				<td id="v_ac_val"> - </td>
+				<td id="i_ac_val"> - </td>
+			</tr>
+			<tr>
+				<td>Volt AC</td>
+				<td>Ampere AC</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<table class="panel_monitor">
+		<thead><tr><th colspan="2">Suhu Lingkungan Panel Surya</th></tr></thead>
+		<tbody>
+			<tr>
+				<td rowspan="2" id="imgGraph"><img src="img/suhu_lux.png"></td>
+				<td id="temp_val"> - </td>
+			</tr>
+			<tr><td>Derajat Celcius</td></tr>
+		</tbody>
+	</table>
+</div>
+
+<div>
+	<div class="profil_box">
+		<table class="table_profil"><tbody>
+			<tr><td colspan="2"><strong>ADMIN PROFILE</strong></td></tr>
+			<tr>
+				<td width="10%" height="50px">
+					<div id="profilePhoto">
+						<img src="img/default_user.png" height=30px">
+					</div>
+				</td>
+				<td>
+					<table class="data"><tbody>
+						<tr><th>Name</th><th>:</th><td id="p_nama"> - </td></tr>
+						<tr><th>Email</th><th>:</th><td id="p_email"> - </td></tr>
+						<tr><th>Contact</th><th>:</th><td id="p_contact"> - </td></tr>
+					</tbody></table>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+	<div><?php include("html/calender.html"); ?></div>
+</div>
+

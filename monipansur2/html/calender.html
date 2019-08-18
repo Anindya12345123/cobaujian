@@ -1,0 +1,121 @@
+<?php
+	date_default_timezone_set("Asia/Jakarta");
+	$date = new DateTime();
+	$current_timestamp = $date->getTimestamp();
+?>
+<div id="idx-calendar">
+	<div id="calendar-control">
+		<div id="clockContainer"></div>
+		<div id="dateContainer"></div>
+	</div>
+	<div id="dateNum"></div>
+</div>
+<script>
+var month_array = ["Januari", "Febuari", "Maret", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "Desember"];
+var day_array = ["Minggu","Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"];
+
+var curentDay = 1;
+var curentYear = 2000;
+var curentMonth = 0;
+var lastDate = 100;
+var currentDate = 100;
+var hours = 0;
+var minutes = 0;
+var seconds = 0;
+
+function isLeap(year){
+	if((year%400)==0)	return 1;
+	if((year%100)==0)	return 0;
+	if((year%4)==0)		return 1;
+	return 0;
+}
+function updateClock()	{
+	var hour12 = hours;
+	var AmPm = "AM";
+	if(hour12>12)	{
+		hour12 -= 12;
+		AmPm = "PM";
+	}
+	var strTime = "<ul><li>";
+	strTime += hours;
+	strTime += ':';
+	strTime += minutes;
+	strTime += ':';
+	strTime += seconds;
+	strTime += ' ';
+	strTime += AmPm;
+	strTime += "</li><li style=\"font-size: 2vw;\">";
+	strTime += "</li></ul>";
+	
+	document.getElementById("clockContainer").innerHTML = strTime;
+}
+
+function displayCalendar(){
+	var dateTime = new Date();
+	curentDate = dateTime.getDate();
+	curentMonth = dateTime.getMonth();
+	curentYear = dateTime.getFullYear();
+	var febDay = 28 + isLeap(curentYear);
+	var maxDayPerMonth = [31, febDay, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+	hours = dateTime.getHours();
+	minutes = dateTime.getMinutes();
+	seconds = dateTime.getSeconds();
+	curentDay = dateTime.getDay();
+	
+	
+	var prevMonth = (curentMonth+11) % 12;
+	var nextMonth = (curentMonth+1) % 12;
+	
+	var date1 = new Date(curentYear, curentMonth, 1);
+	var startDate = maxDayPerMonth[0] + 1 - date1.getDay();
+	var monthIdx = 0;
+	
+	var dw;
+	var dm;
+	var m;
+	var header = "";
+	var strDate = "";
+	
+	updateClock();
+	
+	
+	if(lastDate!=curentDate)	{
+		lastDate = curentDate;
+		strDate = day_array[curentDay] + " , " + curentDate + ' ' + month_array[curentMonth]+ ' ' + curentYear;
+		
+		header += "<ul class=\"dayName\">";
+		for(dw=0; dw<7; dw++)	{
+			header += "<li>";
+			header += day_array[dw];
+			header += "</li>";
+		}
+		header += "</ul>";
+		
+		var dateContent = "";
+		dm = startDate;
+		m = prevMonth;
+		while(1)	{
+			dateContent += "<ul>";
+			for(dw=0; dw<7; dw++)	{
+				if(dm==curentDate)			dateContent += "<li class=\"dayNow\">";
+				else if(m!=curentMonth)	dateContent += "<li class=\"outMonth\">";
+				else 										dateContent += "<li>";
+				dateContent += dm;
+				dateContent += "</li>";
+				dm++;
+				if(dm>maxDayPerMonth[m])	{
+					dm = 1;
+					m++;
+				}
+			}
+			dateContent += "</ul>";
+			if(m==nextMonth)	break;
+		}
+		
+		document.getElementById("dateContainer").innerHTML = strDate;
+		document.getElementById("dateNum").innerHTML= header + dateContent;
+	}
+}
+
+</script>
